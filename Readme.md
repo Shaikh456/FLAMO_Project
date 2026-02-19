@@ -79,34 +79,34 @@ flamo/
 ---
 
 ## ⚙ Installation
-Clone Repository
-git clone https://github.com/your-username/flamo.git
-cd flamo
+# Clone Repository
+`git clone https://github.com/your-username/flamo.git
+cd flamo`
 
-Backend Setup
-cd backend
+# Backend Setup
+`cd backend
 npm install
 npm install express mongoose dotenv cors bcrypt jsonwebtoken aws-sdk multer multer-s3 web3
 npm install --save-dev nodemon
-npm run dev
+npm run dev`
 
 
-Create .env file with:
+# Create .env file with:
 
-PORT=5000
+`PORT=5000
 MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_secret
 AWS_ACCESS_KEY=your_key
 AWS_SECRET_KEY=your_secret
 AWS_BUCKET_NAME=your_bucket
 POLYGON_RPC_URL=your_rpc
-PRIVATE_KEY=your_wallet_private_key
+PRIVATE_KEY=your_wallet_private_key`
 
-Frontend Setup
-cd frontend
+# Frontend Setup
+`cd frontend
 npm install
 npm install axios react-router-dom jwt-decode
-npm run dev
+npm run dev`
 ---
 
 ## 📊 Results
@@ -120,9 +120,9 @@ Scalable and production-ready architecture
 
 ## 🔮 Future Enhancements
 
-IPFS decentralized storage integration
-Smart contract-based inheritance automation
-AI-powered memory categorization
+- IPFS decentralized storage integration
+- Smart contract-based inheritance automation
+- AI-powered memory categorization
 Mobile application deployment
 ---
 

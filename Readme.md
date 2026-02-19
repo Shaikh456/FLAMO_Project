@@ -1,219 +1,132 @@
-📘 FLAMO – Family Memory & Legacy Organizer
-A Blockchain-Based Secure Digital Legacy Management System
-📌 Abstract
+### 🌿 FLAMO
+Family Memory & Legacy Organizer
+A Blockchain-Integrated Digital Heritage Management System
+---
+## 📖 Overview
 
-FLAMO (Family Memory & Legacy Organizer) is a secure digital platform designed to preserve, manage, and verify family memories and heirlooms using modern web technologies and blockchain integration.
+FLAMO (Family Memory & Legacy Organizer) is a secure, family-centric digital platform designed to preserve, manage, and verify family memories and heirlooms.
 
-The system addresses the problem of:
+Unlike traditional cloud storage systems that focus on individuals, FLAMO introduces:
+    - Structured family-based access control
+    - Uploader-restricted modification rights
+    - Blockchain-backed authenticity verification
+    - Deduplication for storage optimization
+    - Scalable MVC-based architecture
 
-Loss of physical heirlooms
+The platform combines centralized cloud storage with decentralized blockchain verification to ensure security, transparency, and long-term digital legacy preservation.
+---
 
-Unauthorized modification of digital memories
+## 🚀 Key Features
 
-Lack of secure family-based legacy systems
+- 🔐 JWT-based secure authentication
+- 👨‍👩‍👧 Family creation and joining via unique Family ID
+- 🖼 Memory upload with duplicate prevention
+- ☁ AWS S3 storage for media files
+- 🔗 Polygon blockchain integration for heirloom verification
+- 🧾 Transaction hash generation for authenticity validation
+ ⚙ Modular MVC backend architecture
+---
 
-Duplicate storage inefficiencies
 
-By integrating JWT-based authentication, family-level access control, and Polygon blockchain verification, FLAMO ensures authenticity, security, and long-term preservation of family heritage.
+## 🏗 Tech Stack
+# Frontend
+- React.js
+- Axios
+- React Router
 
-🎯 Problem Statement
+# Backend
+- Node.js
+- Express.js
+- MVC Architecture
 
-In the digital age, families increasingly store memories online. However:
+# Database
+- MongoDB
+- MongoDB Atlas
 
-There is no structured legacy system for families.
+# Cloud Storage
+- AWS S3
 
-Digital memories can be modified without traceability.
+# Authentication
+- JSON Web Token (JWT)
+- bcrypt
 
-Heirloom authenticity cannot be verified digitally.
+# Blockchain
+- Polygon Network
+Web3.js
+---
 
-Duplicate storage increases inefficiency.
-
-FLAMO aims to solve these challenges by combining:
-
-Secure backend architecture
-
-Role-based family access
-
-Blockchain-based verification
-
-Storage optimization via deduplication
-
-🎯 Objectives
-
-To develop a secure family-based digital memory system.
-
-To implement role-based update and delete permissions.
-
-To integrate blockchain for heirloom authenticity verification.
-
-To prevent duplicate memory storage.
-
-To design a scalable MVC-based backend architecture.
-
-🏗️ System Architecture
-
-The backend follows a Model-View-Controller (MVC) architecture.
-
+## 📂 Project Structure
 backend/
  └── src/
-     ├── app.js
-     ├── config/
-     ├── routes/
-     ├── controllers/
-     ├── services/
-     │   └── blockchain.service.js
-     ├── models/
-     ├── middlewares/
-     ├── utils/
-     └── uploads/
-
-Architecture Layers Explanation
-
-Routes – Define API endpoints
-
-Controllers – Handle request & response logic
-
-Services – Business logic (Blockchain integration)
-
-Models – Database schema definitions
-
-Middlewares – Authentication & validation
-
-Config – Environment configurations
-
-This architecture ensures scalability, maintainability, and separation of concerns.
-
-🛠️ Technologies Used
-Frontend
-
-React.js
-
-Axios
-
-React Router
-
-Backend
-
-Node.js
-
-Express.js
-
-JWT Authentication
-
-MVC Pattern
-
-Database
-
-MongoDB (Mongoose)
-
-Blockchain
-
-Polygon Network
-
-Web3 Integration
-
-🔐 Security Implementation
-
-JWT-based secure authentication
-
-Password hashing using bcrypt
-
-Protected API routes
-
-Role-based access control
-
-Wallet validation before blockchain transactions
-
-👨‍👩‍👧 Family Access Control Logic
-
-FLAMO enforces two important rules:
-
-All family members can view shared memories.
-
-Only the original uploader can update or delete their own memory.
-
-This ensures ownership integrity and prevents misuse.
-
-💎 Blockchain Integration
-
-The heirloom module allows:
-
-On-chain registration of heirlooms
-
-Storage of transaction hash
-
-Verification of authenticity
-
-Tamper-proof legacy records
-
-Blockchain logic is isolated inside:
-
-services/blockchain.service.js
-
-
-This ensures modularity and maintainability.
-
-🧠 Deduplication Strategy
-
-To optimize storage:
-
-Duplicate memories are restricted.
-
-Image checks prevent redundant uploads.
-
-Efficient storage usage across family members.
-
-📊 Expected Outcomes
-
-Secure digital family archive
-
-Verified blockchain-backed heirloom records
-
-Controlled modification rights
-
-Scalable architecture for future expansion
-
-🚀 Future Enhancements
-
-AI-based memory tagging
-
-Cloud storage integration
-
-Gas optimization strategies
-
-Mobile application version
-
-Advanced cryptographic verification
-
-📚 Academic Contribution
-
-This project contributes to:
-
-Applied Blockchain in Digital Heritage
-
-Secure Multi-user Access Systems
-
-Role-based Data Ownership Models
-
-Efficient Digital Storage Management
-
-It demonstrates integration of:
-
-Full-stack web development
-
-Blockchain systems
-
-Secure authentication frameworks
-
-Real-world legacy preservation use cases
-
-👨‍💻 Researcher
+     ├── config/       # Database & Cloud configurations
+│       ├── routes/       # API Endpoints
+│       ├── controllers/  # Business logic
+│       ├── services/     # Blockchain & AWS logic
+│       ├── models/       # Mongoose schemas
+│       ├── middlewares/  # Auth & Validation
+│       └── utils/        # Helper functions
+└── frontend/
+    ├── components/       # Reusable UI elements
+    ├── pages/            # View components (Home, Dashboard, etc.)
+    ├── services/         # API call abstractions
+    ├── context/          # Global state management
+    └── routes/           # Routes  for frontend
+---
+
+## ⚙ Installation
+Clone Repository
+git clone https://github.com/your-username/flamo.git
+cd flamo
+
+Backend Setup
+cd backend
+npm install
+npm install express mongoose dotenv cors bcrypt jsonwebtoken aws-sdk multer multer-s3 web3
+npm install --save-dev nodemon
+npm run dev
+
+
+Create .env file with:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret
+AWS_ACCESS_KEY=your_key
+AWS_SECRET_KEY=your_secret
+AWS_BUCKET_NAME=your_bucket
+POLYGON_RPC_URL=your_rpc
+PRIVATE_KEY=your_wallet_private_key
+
+Frontend Setup
+cd frontend
+npm install
+npm install axios react-router-dom jwt-decode
+npm run dev
+---
+
+## 📊 Results
+
+Secure family-based collaboration
+Immutable blockchain-backed heirloom records
+Reduced redundant storage
+Enhanced ownership integrity
+Scalable and production-ready architecture
+---
+
+## 🔮 Future Enhancements
+
+IPFS decentralized storage integration
+Smart contract-based inheritance automation
+AI-powered memory categorization
+Mobile application deployment
+---
+
+## 👨‍💻 Author
 
 Mustafa Shaikh
-Research Project: FLAMO – Family Memory & Legacy Organizer
+Research Project – FLAMO
+---
+## 📜 License
 
-📜 Conclusion
-
-FLAMO provides a structured, secure, and blockchain-backed approach to digital legacy preservation. It combines modern web technologies with decentralized verification to create a scalable and secure family heritage management system.
-
-"# FLAMO_Project" 
+This project is developed for academic and research purposes.
+---

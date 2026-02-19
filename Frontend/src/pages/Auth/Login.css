@@ -1,0 +1,297 @@
+/* ===============================
+   SHARED AUTH LAYOUT (Centered & Modern)
+================================ */
+:root {
+  --primary: #C6A75E;        /* Gold */
+  --primary-hover: #b09350;
+  --background: #0b0b0e;     /* Deep dark background */
+  --panel-bg: #141419;       /* Input/Card background */
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  --border-color: #333333;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+}
+
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--background);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===============================
+   LEFT SIDE - BRANDING PANEL
+================================ */
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #1a1a20 0%, #0f0f12 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical Center */
+  align-items: center;     /* Horizontal Center */
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-main);
+  text-align: center;      /* Center text content */
+}
+
+/* Decorative Glow */
+.auth-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(198, 167, 94, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures children are centered */
+}
+
+.logo-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.auth-left h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.auth-left p {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 35px;
+  max-width: 80%; /* Prevent text from getting too wide */
+}
+
+/* Feature List - Centered Block, Left-Aligned Text */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Center the list block itself */
+  display: inline-block; /* Allows text-align: left to work inside centered parent */
+  text-align: left; 
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+/* Gold Checkmark */
+.feature-list li::before {
+  content: '✓';
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(198, 167, 94, 0.2);
+  color: var(--primary);
+  border-radius: 50%;
+  margin-right: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   RIGHT SIDE - FORM AREA
+================================ */
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: var(--background);
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-header {
+  margin-bottom: 30px;
+  text-align: center; /* Center header on mobile/desktop form */
+}
+
+.auth-header h2 {
+  font-size: 28px;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* INPUTS */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--panel-bg);
+  color: var(--text-main);
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(198, 167, 94, 0.15);
+}
+
+/* BUTTONS */
+button.auth-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--primary);
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+button.auth-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(198, 167, 94, 0.2);
+}
+
+button.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* LINKS */
+.auth-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-footer a, 
+.auth-footer span {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ALERTS */
+.error-msg {
+  background: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  color: #ff4d4d;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-msg {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #2ecc71;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column; /* Stack them vertically */
+  }
+
+  /* Hide left panel on mobile to save space, OR show as header */
+  .auth-left {
+    display: none; 
+  }
+  
+  .auth-right {
+    padding: 30px 20px;
+    min-height: 100vh;
+  }
+  
+  .auth-form-wrapper {
+    max-width: 100%;
+  }
+}

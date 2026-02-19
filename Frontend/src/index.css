@@ -1,0 +1,58 @@
+/* ===============================
+   THEME VARIABLES
+================================ */
+
+/* LIGHT THEME */
+:root {
+  --bg-main: #f4f6f9;
+  --card-bg: #ffffff;
+  --navbar-bg: rgba(255,255,255,0.8);
+  --sidebar-bg: #ffffff;
+
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+
+  --border-color: rgba(0,0,0,0.08);
+  --hover-bg: rgba(98,0,234,0.06);
+
+  --danger-bg: #fee2e2;
+  --danger-text: #dc2626;
+
+  --success-bg: #dcfce7;
+  --success-text: #16a34a;
+
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.06);
+
+  --primary: #6200ea;
+}
+
+/* DARK THEME */
+body.dark {
+  --bg-main: #0f172a;
+  --card-bg: #1e293b;
+  --navbar-bg: rgba(30,41,59,0.9);
+  --sidebar-bg: #1e293b;
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  --border-color: rgba(255,255,255,0.08);
+  --hover-bg: rgba(139,92,246,0.15);
+
+  --danger-bg: #7f1d1d;
+  --danger-text: #fca5a5;
+
+  --success-bg: #14532d;
+  --success-text: #4ade80;
+
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.5);
+
+  --primary: #8b5cf6;
+}
+
+/* Smooth transition */
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,40 @@
+.family-setup {
+  padding: 40px;
+  text-align: center;
+}
+
+.family-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.family-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.family-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+  background: #141419;
+  color: white;
+}
+
+.family-card button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+}

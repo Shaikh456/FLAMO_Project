@@ -1,0 +1,428 @@
+.memories-container {
+  width: 100%;
+}
+
+.memories-header {
+  margin-bottom: 20px;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.memory-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.memory-card:hover {
+  transform: translateY(-4px);
+}
+
+.memory-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.memory-images img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.memory-body {
+  padding: 16px;
+}
+
+.memory-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.memory-actions button {
+  margin-left: 8px;
+}
+
+.btn-edit {
+  background: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.memory-form-container {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.memory-form input,
+.memory-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.drop-zone.active {
+  border-color: var(--primary);
+  background: rgba(98, 0, 234, 0.05);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ================================
+   LIGHTBOX MODAL
+================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.nav-btn.left {
+  left: -70px;
+}
+
+.nav-btn.right {
+  right: -70px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .nav-btn.left {
+    left: 10px;
+  }
+
+  .nav-btn.right {
+    right: 10px;
+  }
+
+  .lightbox-content {
+    width: 100%;
+  }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* =============================
+   DOWNLOAD BUTTONS
+============================= */
+
+.btn-download {
+  background: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-download:hover {
+  background: #0284c7;
+  color: white;
+}
+
+/* Single image download inside modal */
+.download-single-btn {
+  position: absolute;
+  bottom: -50px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Adjust modal spacing */
+.lightbox-content {
+  padding-bottom: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .download-single-btn {
+    bottom: 10px;
+  }
+}
+
+/* ===============================
+   ADD MEMORY PAGE ENHANCED
+================================ */
+
+.add-memory-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.add-memory-card {
+  width: 100%;
+  max-width: 750px;
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: var(--text-muted, #777);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.memory-form input,
+.memory-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.memory-form input:focus,
+.memory-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(98,0,234,0.1);
+}
+
+.memory-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Drop Zone */
+.drop-zone {
+  border: 2px dashed #ddd;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  background: #fafafa;
+}
+
+.drop-zone.active {
+  border-color: var(--primary);
+  background: rgba(98, 0, 234, 0.05);
+}
+
+.drop-content p {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.upload-icon {
+  font-size: 40px;
+}
+
+.or-text {
+  display: block;
+  margin: 5px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  opacity: 0.9;
+}
+
+/* Preview */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.preview-card {
+  position: relative;
+}
+
+.preview-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.remove-img-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remove-img-btn:hover {
+  background: red;
+}
+
+.full-width {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-memory-card {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .preview-card img {
+    height: 90px;
+  }
+}
+
+

@@ -85,11 +85,11 @@ flamo/
 cd flamo`
 
 # Backend Setup
-`cd backend
-npm install
-npm install express mongoose dotenv cors bcrypt jsonwebtoken aws-sdk multer multer-s3 web3
-npm install --save-dev nodemon
-npm run dev`
+`cd backend`
+`npm install`
+`npm install express mongoose dotenv cors bcrypt jsonwebtoken aws-sdk multer multer-s3 web3`
+`npm install --save-dev nodemon`
+`npm run dev`
 
 
 # Create .env file with:
@@ -104,10 +104,10 @@ POLYGON_RPC_URL=your_rpc
 PRIVATE_KEY=your_wallet_private_key`
 
 # Frontend Setup
-`cd frontend
-npm install
-npm install axios react-router-dom jwt-decode
-npm run dev`
+`cd frontend`
+`npm install`
+`npm install axios react-router-dom jwt-decode`
+`npm run dev`
 ---
 
 ## 📊 Results

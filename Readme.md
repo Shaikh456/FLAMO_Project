@@ -71,7 +71,7 @@ flamo/
 └── frontend/
     ├── components/       # Reusable UI elements
     ├── pages/            # View components
-    ├── routes/           # ROuting of frontend
+    ├── routes/           # Routing of frontend
     ├── services/         # API call abstractions
     └── context/          # Global state management
 ```

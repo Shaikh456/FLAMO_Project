@@ -7,12 +7,11 @@ A Blockchain-Integrated Digital Heritage Management System
 FLAMO (Family Memory & Legacy Organizer) is a secure, family-centric digital platform designed to preserve, manage, and verify family memories and heirlooms.
 
 Unlike traditional cloud storage systems that focus on individuals, FLAMO introduces:
-    - Structured family-based access control
-    - Uploader-restricted modification rights
-    - Blockchain-backed authenticity verification
-    - Deduplication for storage optimization
-    - Scalable MVC-based architecture
-
+- Structured family-based access control
+- Uploader-restricted modification rights
+- Blockchain-backed authenticity verification
+- Deduplication for storage optimization
+- Scalable MVC-based architecture
 The platform combines centralized cloud storage with decentralized blockchain verification to ensure security, transparency, and long-term digital legacy preservation.
 ---
 
@@ -24,7 +23,8 @@ The platform combines centralized cloud storage with decentralized blockchain ve
 - ☁ AWS S3 storage for media files
 - 🔗 Polygon blockchain integration for heirloom verification
 - 🧾 Transaction hash generation for authenticity validation
- ⚙ Modular MVC backend architecture
+- ⚙ Modular MVC backend
+ architecture
 ---
 
 
@@ -51,8 +51,9 @@ The platform combines centralized cloud storage with decentralized blockchain ve
 - bcrypt
 
 # Blockchain
-- Polygon Network
-Web3.js
+- Web3.js
+- Polygon 
+Network
 ---
 
 ## 📂 Project Structure
@@ -111,11 +112,12 @@ npm run dev`
 
 ## 📊 Results
 
-Secure family-based collaboration
-Immutable blockchain-backed heirloom records
-Reduced redundant storage
-Enhanced ownership integrity
-Scalable and production-ready architecture
+- Secure family-based collaboration
+- Immutable blockchain-backed heirloom records
+- Reduced redundant storage
+- Enhanced ownership integrity
+- Scalable and production-ready 
+architecture
 ---
 
 ## 🔮 Future Enhancements
@@ -123,7 +125,8 @@ Scalable and production-ready architecture
 - IPFS decentralized storage integration
 - Smart contract-based inheritance automation
 - AI-powered memory categorization
-Mobile application deployment
+- Mobile application 
+deployment
 ---
 
 ## 👨‍💻 Author

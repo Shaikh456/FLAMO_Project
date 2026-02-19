@@ -81,8 +81,8 @@ flamo/
 
 ## ⚙ Installation
 # Clone Repository
-`git clone https://github.com/your-username/flamo.git
-cd flamo`
+`git clone https://github.com/your-username/flamo.git`
+`cd flamo`
 
 # Backend Setup
 `cd backend`

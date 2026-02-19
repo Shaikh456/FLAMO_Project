@@ -56,9 +56,12 @@ Web3.js
 ---
 
 ## 📂 Project Structure
-backend/
- └── src/
-     ├── config/       # Database & Cloud configurations
+
+```
+flamo/
+├── backend/
+│   └── src/
+│       ├── config/       # Database & Cloud configurations
 │       ├── routes/       # API Endpoints
 │       ├── controllers/  # Business logic
 │       ├── services/     # Blockchain & AWS logic
@@ -67,10 +70,11 @@ backend/
 │       └── utils/        # Helper functions
 └── frontend/
     ├── components/       # Reusable UI elements
-    ├── pages/            # View components (Home, Dashboard, etc.)
+    ├── pages/            # View components
     ├── services/         # API call abstractions
-    ├── context/          # Global state management
-    └── routes/           # Routes  for frontend
+    └── context/          # Global state management
+```
+
 ---
 
 ## ⚙ Installation
